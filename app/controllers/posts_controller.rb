@@ -50,4 +50,5 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :body ,:start_date, :end_date, :all_day)
+  end  
 end

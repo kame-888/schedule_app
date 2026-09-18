@@ -1,0 +1,39 @@
+<h2>スケジュール管理APP</h2>
+<tr>
+  <td>
+    <%= link_to "新規登録", new_post_path %>
+  </td>
+</tr>
+<table>
+  <tr>
+    <th>タイトル</th><th>内容</th><th>開始日</th><th>終了日</th><th>終日</th><th>更新日時</th>
+  </tr>
+  <% @posts.each do |post| %>
+    <tr>
+      <td>
+        <%= post.title %>
+      </td>
+      <td>
+        <%= post.body %>
+      </td>
+      <td>
+        <%= post.start_date %>
+      </td>
+      <td>
+        <%= post.end_date %>
+      </td>
+      <td>
+        <%= post.updated_at %>
+      </td>
+      <td>
+        <%= link_to "詳細", post %>
+      </td>
+      <td>
+        <%= link_to "編集", edit_post_path(post) %>
+      </td>
+      <td>
+        <%= link_to "削除", post, data: {turbo_method: :delete, turbo_confirm: "選択したスケジュールを削除しますか？"} %>
+      </td>
+    </tr>
+  <% end %>
+</table>

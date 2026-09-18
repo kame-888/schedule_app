@@ -1,0 +1,35 @@
+<%= form_with model: @post do |form| %>
+  <%# エラーメッセージ表示 %>
+  <% if @post.errors.any? %>
+    <ul class="errors">
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div>
+    <%= form.label :title, "タイトル" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :body, "内容" %>
+    <%= form.text_field :body %>
+  </div>
+
+  <div>
+    <%= form.label :start_date, "開始日" %>
+    <%= form.email_field :start_date %>
+  </div>
+
+  <div>
+    <%= form.label :end_date, "終了日" %>
+    <%= form.number_field :end_date %>
+  </div>
+  <% if action_name == 'new' %>
+    <%= form.submit "登録" %>
+  <% else %>
+    <%= form.submit "更新" %>
+  <% end %>
+<% end %>

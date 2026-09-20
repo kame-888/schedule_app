@@ -54,8 +54,11 @@ group :development, :test do
 end
 
 group :development do
+  #Use Rspec
+  gem "rspec-rails"
+  gem "factory_bot_rails"  
   # Use console on exceptions pages [https://github.com/rails/web-console]
-  gem "web-console"
+  # gem "web-console"
 end
 
 group :test do

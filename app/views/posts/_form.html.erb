@@ -31,7 +31,7 @@
     <%= form.label :all_day, "終了日" %>
     <%= form.check_box :all_day %>
   </div>
-  <% if action_name == 'new' %>
+  <% if form.object.new_record? %>
     <%= form.submit "登録" %>
   <% else %>
     <%= form.submit "更新" %>

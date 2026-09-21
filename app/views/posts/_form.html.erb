@@ -8,6 +8,8 @@
     </ul>
   <% end %>
 
+  <%= flash[:notice] %>
+
   <div class="form-group">
     <%= form.label :title, "タイトル", class:"control-label" %>
     <%= form.text_field :title, class:"form-control" %>

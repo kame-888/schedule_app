@@ -18,6 +18,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.order(created_at: :desc)
+    @counts = Post.count
   end
 
   def show

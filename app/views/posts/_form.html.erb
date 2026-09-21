@@ -8,32 +8,35 @@
     </ul>
   <% end %>
 
-  <div>
-    <%= form.label :title, "タイトル" %>
-    <%= form.text_field :title %>
+  <div class="form-group">
+    <%= form.label :title, "タイトル", class:"control-label" %>
+    <%= form.text_field :title, class:"form-control" %>
   </div>
 
-  <div>
-    <%= form.label :body, "内容" %>
-    <%= form.text_area :body %>
+  <div class="form-group">
+    <%= form.label :body, "内容", class:"control-label" %>
+    <%= form.text_area :body, class:"form-control" %>
   </div>
 
-  <div>
-    <%= form.label :start_date, "開始日" %>
-    <%= form.date_field :start_date %>
+  <div class="form-group row">
+    <div class="col-xs-6">
+      <%= form.label :start_date, "開始日", class:"control-label" %>
+      <%= form.date_field :start_date, class:"form-control" %>
+    </div>
+    <div class="col-xs-6">
+      <%= form.label :end_date, "終了日", class:"control-label" %>
+      <%= form.date_field :end_date, class:"form-control" %>
+    </div>
   </div>
-
-  <div>
-    <%= form.label :end_date, "終了日" %>
-    <%= form.date_field :end_date %>
-  </div>
-  <div>
-    <%= form.label :all_day, "終了日" %>
-    <%= form.check_box :all_day %>
+  <div class="checkbox">
+    <label>
+      <%= form.check_box :all_day %> 終日の場合はチェック入れてください
+    </label>
   </div>
   <% if form.object.new_record? %>
-    <%= form.submit "登録" %>
+    <%= form.submit "登録", class:"btn btn-success" %>
   <% else %>
-    <%= form.submit "更新" %>
+    <%= form.submit "更新", class:"btn btn-success" %>
   <% end %>
+  <%= link_to "キャンセル", posts_path, class: "btn btn-default" %>
 <% end %>

@@ -72,6 +72,6 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 
-  #FactoryBotのメソッドｐをspec内で使えるようにする
+  # FactoryBotのメソッドｐをspec内で使えるようにする
   config.include FactoryBot::Syntax::Methods
 end

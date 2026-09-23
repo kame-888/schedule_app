@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
-  
-    before_action :set_post_id, only: [:show, :edit, :update, :destroy]
+    before_action :set_post_id, only: [ :show, :edit, :update, :destroy ]
 
     def new
     @post = Post.new
@@ -50,6 +49,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title, :body ,:start_date, :end_date, :all_day)
-  end  
+    params.require(:post).permit(:title, :body, :start_date, :end_date, :all_day)
+  end
 end

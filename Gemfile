@@ -20,7 +20,7 @@ gem "jbuilder"
 # gem "redis", ">= 4.0.1"
 gem "fiddle"
 
-#Use json
+# Use json
 gem "json", "~> 2.7.2"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
@@ -39,10 +39,10 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 # Use Bootstrap
-gem 'bootstrap-sass','~> 3.3.6'
-gem 'sass-rails', '>= 3.2'
+gem "bootstrap-sass", "~> 3.3.6"
+gem "sass-rails", ">= 3.2"
 
-#Use Japanese translation
+# Use Japanese translation
 gem "rails-i18n"
 
 group :development, :test do
@@ -57,9 +57,9 @@ group :development, :test do
 end
 
 group :development, :test do
-  #Use Rspec
+  # Use Rspec
   gem "rspec-rails"
-  gem "factory_bot_rails"  
+  gem "factory_bot_rails"
   # Use console on exceptions pages [https://github.com/rails/web-console]
   # gem "web-console"
 
